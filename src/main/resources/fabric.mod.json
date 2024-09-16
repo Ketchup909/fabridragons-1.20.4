@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "fabridragons",
+	"version": "${version}",
+	"name": "FabriDragons",
+	"description": "Add some cool dragons to fabric.  More to come!",
+	"authors": [
+		"ketch"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/fabridragons/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.ketch.fabridragons.FabriDragons"
+		],
+		"client": [
+			"net.ketch.fabridragons.FabriDragonsClient"
+		],
+		"fabric-datagen": [
+			"net.ketch.fabridragons.FabriDragonsDataGenerator"
+		]
+	},
+	"mixins": [
+		"fabridragons.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
