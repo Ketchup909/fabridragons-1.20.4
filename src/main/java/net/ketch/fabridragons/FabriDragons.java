@@ -2,6 +2,9 @@ package net.ketch.fabridragons;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.ketch.fabridragons.entity.ModEntities;
+import net.ketch.fabridragons.entity.custom.WyvernEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,7 +17,7 @@ public class FabriDragons implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
-
-		LOGGER.info("Hello Fabric world!");
+		FabricDefaultAttributeRegistry.register(ModEntities.WYVERN, WyvernEntity.createWyvernAttributes());
+		LOGGER.info("Wyvern registered from OnInitialize in FabriDragons.java ");
 	}
 }
