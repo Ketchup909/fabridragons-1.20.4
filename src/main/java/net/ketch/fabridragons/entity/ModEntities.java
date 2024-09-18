@@ -15,8 +15,5 @@ public class ModEntities {
     public static final EntityType<WyvernEntity> WYVERN = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(FabriDragons.MOD_ID, "wyvern"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, WyvernEntity::new)
-                    .dimensions(EntityDimensions.fixed(2f, 2f)).build());
-
-
-
+                    .dimensions(EntityDimensions.fixed(4f, 4f)).build());
 }
